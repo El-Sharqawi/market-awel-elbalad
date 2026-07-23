@@ -1,0 +1,968 @@
+<_____Html_______>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>ماركت أول البلد</title>
+    <!-- Google Font -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+
+            <div class="header-content">
+                
+            <h1>
+                <i class="fa-solid fa-cart-shopping"></i>
+                    Awel-ElBalad-Market
+            </h1>
+            </div>
+
+    </header>
+
+<section class="search-box">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 ابحث عن منتج...">
+
+</section>
+
+<section class="market-info">
+
+    <div class="info-card">
+
+        <h2>
+             ماركت أول البلد
+             <i class="fa-solid fa-cart-shopping"></i>
+        </h2>
+
+        <p class="slogan">
+            كل احتياجات بيتك في مكان واحد
+        </p>
+
+
+        <div class="info-item">
+            <i class="fa-regular fa-clock"></i>
+             <span>يوميًا من 8 صباحًا حتى 12 مساءً</span>
+        </div>
+
+        <div class="info-item">
+            <i class="fa-solid fa-phone-flip"></i>
+             <span>01127942103</span>
+        </div>
+
+        <div class="info-item">
+            <i class="fa-solid fa-map-pin"></i>
+            <span>العنوان: في السلع دكان ابو الحاج</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="categories" id="categories">
+
+</section>
+
+<section class="products">
+
+        <h2 class="section-title">
+            المنتجات
+        </h2>
+
+
+    <div class="product-grid" id="product-grid">
+
+    </div>
+
+</section>
+
+
+    </div>
+    
+<script src="assets/js/script.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+<_____style.css_____>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Cairo", sans-serif;
+}
+
+body{
+
+    background:#F5F7FA;
+
+    direction:rtl;
+
+    color:#222;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.header{
+
+    background: linear-gradient(135deg,#2E7D32,#43A047);
+
+    border-radius:25px;
+
+    margin-top:20px;
+
+    padding:50px 30px;
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.header h1{
+
+    font-size:42px;
+
+    font-weight:700;
+
+}
+
+.header p{
+
+    margin-top:15px;
+
+    font-size:20px;
+
+    opacity:.9;
+
+}
+
+/* Search */
+
+.search-box{
+
+    margin-top:-25px;
+
+    padding:0 20px 20px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    outline:none;
+
+    font-size:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+/* Categories */
+
+.categories{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    gap:15px;
+
+    overflow-x:auto;
+
+    padding:20px;
+
+}
+
+.category{
+
+    border:none;
+
+    background:white;
+
+    border-radius:50px;
+
+    padding:12px 22px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    white-space:nowrap;
+
+}
+
+.category:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.products{
+
+    padding:20px;
+
+}
+
+/* =======================
+SECTION TITLE
+======================= */
+
+.section-title{
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+    color:#2E7D32;
+
+}
+
+/* =======================
+PRODUCT GRID
+======================= */
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+/* =======================
+CARD
+======================= */
+
+.card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:contain;
+
+    background:#fff;
+
+    padding:20px;
+
+}
+
+.card-body{
+
+    padding:18px;
+
+}
+
+.card-body h3{
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+.price{
+
+    color:#2E7D32;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+
+}
+
+.available{
+
+    display:inline-block;
+
+    background:#2E7D32;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+}
+
+.available{
+
+    background:#2E7D32;
+
+}
+
+.card .available{
+
+    display:inline-block;
+
+}
+
+.card .available.out{
+
+    background:#d32f2f;
+
+}
+
+.category{
+
+    border:none;
+
+    background:white;
+
+}
+
+.category.active{
+
+    background:#2E7D32;
+
+    color:white;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   Market Info
+=========================== */
+
+.market-info{
+
+    margin:25px 0;
+
+}
+
+.info-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.info-card h2{
+
+    color:#2E7D32;
+
+    margin-bottom:10px;
+
+    font-size:32px;
+
+}
+
+.slogan{
+
+    color:#666;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+}
+
+.info-item{
+
+    margin:12px 0;
+
+    font-size:18px;
+}
+
+.product-name{
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+    min-height:55px;
+
+    color:#333;
+
+}
+
+.price-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+.price{
+
+    color:#2E7D32;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.available{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:10px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+}
+
+
+
+
+
+<______scrip.js_____>
+
+const productGrid = document.getElementById("product-grid");
+const searchInput = document.getElementById("search");
+const categoriesContainer = document.getElementById("categories");
+
+let allProducts = [];
+
+function displayProducts(products){
+
+    productGrid.innerHTML="";
+
+    products.forEach(product=>{
+
+        const card=document.createElement("div");
+
+        card.className="card";
+
+        card.innerHTML=`
+
+            <img src="${product.image}">
+
+           <div class="card-body">
+
+            <h3 class="product-name">
+                ${product.name}
+            </h3>
+
+            <div class="price-row">
+
+                <span class="price">
+                    💰 ${product.price} جنيه
+                </span>
+
+            </div>
+
+            <span class="available ${product.available ? "" : "out"}">
+
+                ${product.available ? "🟢 متوفر" : "🔴 غير متوفر"}
+
+            </span>
+
+</div>
+
+        `;
+
+        productGrid.appendChild(card);
+
+    });
+
+}
+
+function createCategories(products){
+
+    const categories = [...new Set(products.map(product => product.category))];
+
+    categoriesContainer.innerHTML = "";
+
+    const allButton = document.createElement("button");
+
+    allButton.className = "category active";
+
+    allButton.textContent = "الكل";
+
+    allButton.dataset.category = "الكل";
+
+    categoriesContainer.appendChild(allButton);
+
+    categories.forEach(category =>{
+
+        const button = document.createElement("button");
+
+        button.className = "category";
+
+        button.dataset.category = category;
+
+        button.textContent = category;
+
+        categoriesContainer.appendChild(button);
+
+    });
+
+    addCategoryEvents();
+
+}
+
+
+fetch("data/products.json")
+.then(response=>response.json())
+.then(data=>{
+
+    allProducts = data;
+
+    displayProducts(allProducts);
+
+    createCategories(allProducts);
+
+});
+
+searchInput.addEventListener("input",()=>{
+
+    const value=searchInput.value.toLowerCase();
+
+    const filtered=allProducts.filter(product=>
+
+        product.name.toLowerCase().includes(value)
+
+    );
+
+    displayProducts(filtered);
+
+});
+
+function addCategoryEvents(){
+
+    const buttons = document.querySelectorAll(".category");
+
+    buttons.forEach(button=>{
+
+        button.addEventListener("click",()=>{
+
+            buttons.forEach(btn=>
+                btn.classList.remove("active")
+            );
+
+            button.classList.add("active");
+
+            const category = button.dataset.category;
+
+            if(category==="الكل"){
+
+                displayProducts(allProducts);
+
+                return;
+
+            }
+
+            const filtered = allProducts.filter(product=>
+
+                product.category===category
+
+            );
+
+            displayProducts(filtered);
+
+        });
+
+    });
+
+}
+
+
+
+
+
+
+<____products.json_______>
+
+[
+    {
+        "id": 1,
+        "name": "بيبسي",
+        "price": 15,
+        "image": "assets/images/pepsi2.png",
+        "available": true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 2,
+        "name": "سفن أب",
+        "price": 15,
+        "image": "assets/images/7up.png",
+        "available": true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 3,
+        "name": "مريندا برتقال",
+        "price": 15,
+        "image": "assets/images/mirinda.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 4,
+        "name": "مريندا لبان",
+        "price": 20,
+        "image": "assets/images/mirinda2.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 5,
+        "name": "فيروز",
+        "price": 20,
+        "image": "assets/images/fayrouz.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 6,
+        "name": "شوبيس رومان",
+        "price": 15,
+        "image": "assets/images/schweppes.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 7,
+        "name": "بيريل",
+        "price": 20,
+        "image": "assets/images/birell.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 8,
+        "name": "راني مانجا",
+        "price": 20,
+        "image": "assets/images/rani.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 9,
+        "name": "ستنج كزاز طاقة",
+        "price": 15,
+        "image": "assets/images/sting.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 10,
+        "name": "فيوري طاقة",
+        "price": 15,
+        "image": "assets/images/fury.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 11,
+        "name": "ستنج بلاستيك طاقة",
+        "price": 25,
+        "image": "assets/images/sting2.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 12,
+        "name": "فولت طاقة",
+        "price": 10,
+        "image": "assets/images/volt.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 13,
+        "name": "بيج طاقة",
+        "price": 7,
+        "image": "assets/images/big.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 14,
+        "name": "سيكو كولا",
+        "price": 5,
+        "image": "assets/images/seco.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 15,
+        "name": "بيبسي لتر",
+        "price": 40,
+        "image": "assets/images/pepsi later.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 16,
+        "name": "سفن اب لتر",
+        "price": 40,
+        "image": "assets/images/7up later.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 17,
+        "name": "ميرندا لتر",
+        "price": 40,
+        "image": "assets/images/mirinda3.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 18,
+        "name": "ِشوبيس رومان لتر",
+        "price": 40,
+        "image": "assets/images/schweppes later.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 19,
+        "name": "ِشوبيس رومان 2 لتر",
+        "price": 50,
+        "image": "assets/images/schweppes 2later.png",
+        "available":true,
+        "category": "مشروبات"
+    },
+    {
+        "id": 20,
+        "name": "شبسي حار وليمون",
+        "price": 15,
+        "image": "assets/images/chipsy2.png",
+        "available":true,
+        "category": "سناكس"
+    },
+    {
+        "id": 21,
+        "name": "شيبسي جبنة",
+        "price": 15,
+        "image": "assets/images/chipsy.png",
+        "available": true,
+        "category": "سناكس"
+    },
+    {
+        "id": 22,
+        "name": "جاجوار",
+        "price": 10,
+        "image": "assets/images/jaguar.png",
+        "available": true,
+        "category": "سناكس"
+    },
+    {
+        "id": 23,
+        "name": "ويندوز",
+        "price": 10,
+        "image": "assets/images/windows.png",
+        "available": true,
+        "category": "سناكس"
+    },
+    {
+        "id": 24,
+        "name": "جاجوار ستيك",
+        "price": 10,
+        "image": "assets/images/jaguar stic.png",
+        "available": true,
+        "category": "سناكس"
+    },
+    {
+        "id": 25,
+        "name": "بوفا كرانشيتو",
+        "price": 10,
+        "image": "assets/images/puf.png",
+        "available": true,
+        "category": "سناكس"
+    },
+    {
+        "id": 26,
+        "name": "أرز",
+        "price": 35,
+        "image": "assets/images/rice.png",
+        "available": false,
+        "category": "بقالة"
+    },
+    {
+        "id": 27,
+        "name": "جبنة بيضه",
+        "price": 20,
+        "image": "assets/images/bread.png",
+        "available": true,
+        "category": "بقالة"
+    },
+    {
+        "id": 28,
+        "name": "تونة",
+        "price": 45,
+        "image": "assets/images/tuna.png",
+        "available":true,
+        "category": "معلبات"
+    },
+    {
+        "id": 29,
+        "name": "خل المهندس",
+        "price": 13,
+        "image": "assets/images/Leave.png",
+        "available":true,
+        "category": "بقالة"
+    },
+    {
+        "id": 30,
+        "name": "زيت عافية",
+        "price": 220,
+        "image": "assets/images/Health.png",
+        "available":true,
+        "category": "بقالة"
+    },
+    {
+        "id": 31,
+        "name": "زيت هنادي",
+        "price": 190,
+        "image": "assets/images/Hanadi.png",
+        "available":true,
+        "category": "بقالة"
+    },
+    {
+        "id": 32,
+        "name": "بن ابو عوف",
+        "price": 90,
+        "image": "assets/images/coffie.png",
+        "available":true,
+        "category": "بقالة"
+    },
+    {
+        "id": 33,
+        "name": "كيلوباترا",
+        "price": 55,
+        "image": "assets/images/Cleopatra.png",
+        "available":true,
+        "category": "سجائر"
+    },
+    {
+        "id": 34,
+        "name": "بوكس",
+        "price": 55,
+        "image": "assets/images/box.png",
+        "available":true,
+        "category": "سجائر"
+    },
+    {
+        "id": 35,
+        "name": "LM احمر",
+        "price": 90,
+        "image": "assets/images/lm red.png",
+        "available":true,
+        "category": "سجائر"
+    },
+    {
+        "id": 36,
+        "name": "LM ازرق",
+        "price": 90,
+        "image": "assets/images/lm blue.png",
+        "available":true,
+        "category": "سجائر"
+    },
+    {
+        "id": 37,
+        "name": "كريلا",
+        "price": 40,
+        "image": "assets/images/karelia.png",
+        "available":true,
+        "category": "سجائر"
+    },
+    {
+        "id": 38,
+        "name": "ربسوه اوكسي",
+        "price": 10,
+        "image": "assets/images/Cleaner.png",
+        "available":true,
+        "category": "منظفات"
+    },
+    {
+        "id": 39,
+        "name": " صابون دش",
+        "price": 10,
+        "image": "assets/images/dosh.png",
+        "available":true,
+        "category": "منظفات"
+    }
+]
