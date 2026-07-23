@@ -131,7 +131,7 @@ function createCategories(products){
 }
 
 
-fetch("data/products.json")
+fetch("./data/products.json")
 .then(response=>response.json())
 .then(data=>{
 
